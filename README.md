@@ -1,15 +1,17 @@
 # java-properties
 
-![travis](https://travis-ci.org/mattdsteele/java-properties.svg)
+> This project is forked from [mattdsteele/java-properties](https://github.com/mattdsteele/java-properties), and add some features, publish to a new package.
+
+![travis](https://travis-ci.org/liunian/java-properties.svg)
 
 Read Java .properties files. Supports adding dynamically some files and array key value (same key multiple times)
 
 ## Getting Started
-Install the module with: `npm install java-properties`
+Install the module with: `npm install y-java-properties`
 
 ## Documentation
 ```javascript
-    var properties = require('java-properties');
+    var properties = require('y-java-properties');
 
     var values = properties.of('values.properties');
 

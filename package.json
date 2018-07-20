@@ -1,18 +1,15 @@
 {
-  "name": "java-properties",
+  "name": "y-java-properties",
   "description": "Reads and interpolates Java .properties files",
-  "version": "0.2.10",
-  "homepage": "http://github.com/mattdsteele/java-properties",
-  "author": {
-    "email": "orphum@gmail.com",
-    "name": "Matt Steele"
-  },
+  "version": "0.1.0",
+  "homepage": "https://github.com/liunian/java-properties",
+  "author": "liunian <dengjij@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattdsteele/java-properties.git"
+    "url": "https://github.com/liunian/java-properties.git"
   },
   "bugs": {
-    "url": "https://github.com/mattdsteele/java-properties/issues"
+    "url": "https://github.com/liunian/java-properties/issues"
   },
   "licenses": [
     {
