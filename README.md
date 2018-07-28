@@ -7,9 +7,11 @@
 Read Java .properties files. Supports adding dynamically some files and array key value (same key multiple times)
 
 ## Getting Started
+
 Install the module with: `npm install y-java-properties`
 
 ## Documentation
+
 ```javascript
     var properties = require('y-java-properties');
 
@@ -62,6 +64,7 @@ Install the module with: `npm install y-java-properties`
     myOtherFile.addFile('example2.properties');
 ```
 ## Contributing
+
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
@@ -84,4 +87,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * 0.2.10 fix bug with escaped : & = (thanks @Drapegnik)
 
 ## License
+
 Licensed under the MIT license.
