@@ -1,5 +1,7 @@
 'use strict';
 
+const fs = require('fs');
+
 var properties = require('../lib/properties.js'),
     PropertiesFile = properties.PropertiesFile;
 var props;
@@ -313,6 +315,27 @@ exports['properties'] = {
     var myFile = new PropertiesFile('test/fixtures/teamcity.properties');
     test.equal(myFile.get('teamcity.agent.dotnet.agent_url'), 'http://localhost:9090/RPC2');
     test.equal(myFile.get('teamcity.auth.userId'), 'TeamCityBuildId=673');
+    test.done();
+  },
+  'addContent' : function(test) {
+    test.expect(6);
+    // Reset and add manually the 2 first files
+    props.reset();
+    props.addContent(fs.readFileSync('test/fixtures/example.properties', 'utf-8'));
+    props.addContent(fs.readFileSync('test/fixtures/example2.properties', 'utf-8'));
+    test.equal('14.47', props.get('extra.property'));
+    test.equal('444', props.get('another.property'));
+    test.equal('7', props.get('referenced.property'));
+
+    // 'value.1' must not be defined cause it is unix.properties file
+    test.equal(undefined, props.get('value.1'));
+    // add the unix.properties file
+    props.addContent(fs.readFileSync('test/fixtures/unix.properties', 'utf-8'));
+    // check that value.1 is now defined
+    test.equal('value 1', props.get('value.1'));
+    // and that old values are still there
+    test.equal('444', props.get('another.property'));
+
     test.done();
   }
 };

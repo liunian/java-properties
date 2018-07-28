@@ -46,7 +46,11 @@ class PropertiesFile {
 
   addFile(file) {
     let data = fs.readFileSync(file, 'utf-8');
-    let items = data.split(/\r?\n/);
+    this.addContent(data);
+  }
+
+  addContent(content) {
+    let items = content.split(/\r?\n/);
     let me = this;
     for (let i = 0; i < items.length; i++) {
       let line = items[i];
